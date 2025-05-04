@@ -97,6 +97,90 @@ const songs = [
     cover: 'Assests/12.gif',
     artist: 'laufey',
     palette: ['#000000', '#14213d']
+  },
+  {
+    path: 'Assests/13.mp3',
+    displayName: 'West Coast',
+    cover: 'Assests/13.gif',
+    artist: 'Laufey',
+    palette: ['#c9ada7', '#081c15']
+  },
+  {
+    path: 'Assests/14.mp3',
+    displayName: 'Sunflower',
+    cover: 'Assests/14.gif',
+    artist: 'Post Malone',
+    palette: ['#ee9b00', '#bb3e03']
+  },
+  {
+    path: 'Assests/15.mp3',
+    displayName: 'God of light',
+    cover: 'Assests/15.gif',
+    artist: 'SVT <3',
+    palette: ['#ffecd1', '#001524']
+  },
+  {
+    path: 'Assests/16.mp3',
+    displayName: 'Your Name',
+    cover: 'Assests/16.gif',
+    artist: 'Your Name',
+    palette: ['#eae2b7', '#1e6091']
+  },
+  {
+    path: 'Assests/17.mp3',
+    displayName: 'Energetic',
+    cover: 'Assests/17.gif',
+    artist: 'Wanna One',
+    palette: ['#001219', '#005f73']
+  },
+  {
+    path: 'Assests/18.mp3',
+    displayName: 'All The Stars',
+    cover: 'Assests/18.gif',
+    artist: 'Black Panther',
+    palette: ['#e7c6ff', '#3c096c']
+  },
+  {
+    path: 'Assests/19.mp3',
+    displayName: 'Star Boy',
+    cover: 'Assests/19.gif',
+    artist: 'Weeknd',
+    palette: ['#000000', '#748cab']
+  },
+  {
+    path: 'Assests/20.mp3',
+    displayName: 'Honey',
+    cover: 'Assests/20.gif',
+    artist: 'pie',
+    palette: ['#f7ede2', '#14213d']
+  },
+  {
+    path: 'Assests/21.mp3',
+    displayName: 'To You',
+    cover: 'Assests/21.gif',
+    artist: 'from future',
+    palette: ['#dad7cd', '#023047']
+  },
+  {
+    path: 'Assests/22.mp3',
+    displayName: 'Run Away Magic',
+    cover: 'Assests/22.gif',
+    artist: 'TXT',
+    palette: ['#c6ac8f', '#16425b']
+  },
+  {
+    path: 'Assests/23.mp3',
+    displayName: 'Pied Piper',
+    cover: 'Assests/23.gif',
+    artist: 'BTS',
+    palette: ['#f7ede2', '#5f0f40']
+  },
+  {
+    path: 'Assests/24.mp3',
+    displayName: 'ouran high school',
+    cover: 'Assests/24.gif',
+    artist: 'Host club',
+    palette: ['#000000', '#0d1321']
   }
 ];
 
