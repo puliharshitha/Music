@@ -15,6 +15,13 @@ const music = new Audio();
 
 const songs = [
   {
+    path: 'Assests/8.mp3',
+    displayName: 'Blue',
+    cover: 'Assests/8.gif',
+    artist: 'Yung Kai',
+    palette: ['#219ebc', '#023047']
+  },
+  {
     path: 'Assests/1.mp3',
     displayName: 'We dont talk anymore',
     cover: 'Assests/1.gif',
@@ -62,13 +69,6 @@ const songs = [
     cover: 'Assests/7.gif',
     artist: 'A-Wall',
     palette: ['#e9c46a', '#e76f51']
-  },
-  {
-    path: 'Assests/8.mp3',
-    displayName: 'Blue',
-    cover: 'Assests/8.gif',
-    artist: 'Yung Kai',
-    palette: ['#219ebc', '#023047']
   },
   {
     path: 'Assests/9.mp3',
