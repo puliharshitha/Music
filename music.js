@@ -14,7 +14,6 @@ const image = document.getElementById('cover'),
 const music = new Audio();
 
 const songs = [
-  
   {
     path: 'Assests/1.mp3',
     displayName: 'We dont talk anymore',
@@ -215,14 +214,21 @@ function loadMusic(song) {
   music.src = song.path;
   title.textContent = song.displayName;
   artist.textContent = song.artist;
-  image.src = song.cover;
   applyPalette(song.palette);
 }
 
 function changeMusic(direction) {
   musicIndex = (musicIndex + direction + songs.length) % songs.length;
-  loadMusic(songs[musicIndex]);
-  playMusic();
+  const song = songs[musicIndex];
+
+  // Preload the image
+  const img = new Image();
+  img.onload = () => {
+    image.src = song.cover;
+    loadMusic(song);
+    playMusic();
+  };
+  img.src = song.cover;
 }
 
 function updateProgressBar() {
@@ -231,7 +237,10 @@ function updateProgressBar() {
     const progressPercent = (currentTime / duration) * 100;
     progress.style.width = `${progressPercent}%`;
 
-    const formatTime = time => String(Math.floor(time / 60)).padStart(2, '0') + ':' + String(Math.floor(time % 60)).padStart(2, '0');
+    const formatTime = time =>
+      String(Math.floor(time / 60)).padStart(2, '0') + ':' +
+      String(Math.floor(time % 60)).padStart(2, '0');
+
     durationEl.textContent = formatTime(duration);
     currentTimeEl.textContent = formatTime(currentTime);
   }
@@ -243,6 +252,7 @@ function setProgressBar(e) {
   music.currentTime = (clickX / width) * music.duration;
 }
 
+// Event Listeners
 playBtn.addEventListener('click', togglePlay);
 prevBtn.addEventListener('click', () => changeMusic(-1));
 nextBtn.addEventListener('click', () => changeMusic(1));
@@ -250,4 +260,10 @@ music.addEventListener('ended', () => changeMusic(1));
 music.addEventListener('timeupdate', updateProgressBar);
 playerProgress.addEventListener('click', setProgressBar);
 
-loadMusic(songs[musicIndex]);
+// Initial load
+const initialImg = new Image();
+initialImg.onload = () => {
+  image.src = songs[musicIndex].cover;
+  loadMusic(songs[musicIndex]);
+};
+initialImg.src = songs[musicIndex].cover;
